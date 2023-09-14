@@ -146,15 +146,15 @@ Dilihat dari sudut pandang kerunutan proses dalam data preparation, saya melakuk
         
         Tahapan terakhir adalah membangun custom function untuk mendapatkan rekomendasi terhadap data input yang diinginkan. functions ini bekerja dengan mengambil similarity dari data produk yang ingin dicari, data yang similar akan dimasukkan ke dalam variabel closest. parameter K di define untuk menghasilkan top-K recommendation berdasarkan tingkat similarity tertinggi. produk yang dicari akan dihapus agar tidak muncul dalam daftar rekomendasi. Step terakhir, return digunakan untuk mengembalikan values dalam bentuk dataframe, dimana values yang di return merupakan rekomendasi dari judul produk berdasarkan tingkat similarity.
         
-        [![functions](https://github.com/nurmuhimawann/MLT2-Dicoding/raw/main/images/recommendation-content-based.png?raw=true)](https://github.com/nurmuhimawann/MLT2-Dicoding/blob/main/images/recommendation-content-based.png?raw=true)
+       ![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/97ba48c9-6be7-4d13-8543-3c8fe8a50e01)
+
         
     5.  Recommendations
         
-        [![harry](https://github.com/nurmuhimawann/MLT2-Dicoding/raw/main/images/harry-potter.png?raw=true)](https://github.com/nurmuhimawann/MLT2-Dicoding/blob/main/images/harry-potter.png?raw=true)
         
         Berikut ini merupakan Top 5 Recommendations berdasarkan kategori dari produk  'Harry Potter and the Prisioner of Azkaban'. Sistem telah berhasil merekomendasikan produk dengan sesuai, bisa dilihat pada hasil yang mendapatkan rekomendasi produk yang mirip dengan kategori Adventure dan Fantasy.
         
-        [![output-cb](https://github.com/nurmuhimawann/MLT2-Dicoding/raw/main/images/output-content-based.png?raw=true)](https://github.com/nurmuhimawann/MLT2-Dicoding/blob/main/images/output-content-based.png?raw=true)
+    ![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/82adcb5b-a2b3-43d8-8fd8-17f17068f26f)
         
     
     Kelebihan Content-Based Filtering
