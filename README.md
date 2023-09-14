@@ -134,13 +134,13 @@ Dilihat dari sudut pandang kerunutan proses dalam data preparation, saya melakuk
         
         Proses term frequency-inverse document frequency (TF-IDF) diperlukan untuk menemukan representasi kata yang penting dalam kolom kategori. Pada proyek ini, proses vectorizer dilakukan dengan memanfaatkan function  [tfidfvectorizer()](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)  yang telah tersedia pada library scikit-learn. berikut hasil tf-idf dalam bentuk matrix. yang mana pada matrix menunjukkan korelasi antara produk dengan kategori-nya.
         
-        [![tfidf](https://github.com/nurmuhimawann/MLT2-Dicoding/raw/main/images/vectorizer.png?raw=true)](https://github.com/nurmuhimawann/MLT2-Dicoding/blob/main/images/vectorizer.png?raw=true)
+      ![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/b85117ce-0aea-4c40-a130-f44b4bd68ba8)
         
     3.  Perhitungan Cosine Similarity
         
         cosine similarity digunakan untuk menghitung derajat kesamaan (similarity degree) antar produk . Pada proyek ini, kalkulasi similarity dilakukan dengan mengimplementasikan function  [cosine_similarity()](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)  yang telah tersedia pada library sklearn. Perhitungan similarity merupakan tahapan paling penting dalam pendekatan content-based filtering, karena pada dasarnya pendekatan ini menerapkan prinsip kesamaan antar item untuk mendapatkan hasil rekomendasi yang sesuai. Output dari cosine similarity akan menghasilkan suatu matrix kesamaan yang bisa dilihat pada konversi ke bentuk dataframe berikut.
         
-![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/7ea452b7-8293-4f74-901d-2d548dfaeb3a)
+      ![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/7ea452b7-8293-4f74-901d-2d548dfaeb3a)
         
     4.  Create Custom Functions
         
