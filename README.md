@@ -1,8 +1,3 @@
-
-
-
-
-
 # Laporan Proyek Machine Learning - Agus Fahmi Aji Pramana
 
 ## Domain Proyek
@@ -102,11 +97,11 @@ Dilihat dari sudut pandang kerunutan proses dalam data preparation, saya melakuk
         
         Data yang hilang, null, NaN atau tidak terbaca merupakan hal umum yang seringkali ditemui. Agar data yang missing tidak memengaruhi kinerja model yang akan dikembangkan, maka saya akan menghapusnya. Pada proyek ini, saya menemukan missing values pada beberapa feature, salah satunya adalah kategori dimana terdapat data yang tidak jelas namanya.
         
-    -   Data Reduction
+   -   Data Reduction
         
         Data yang terlalu banyak akan memperlambat kinerja proses machine learning. Pada proyek ini, saya memiliki asumsi kalau terdapat beberapa dataset yang ambigu sehingga membuat model kebingunan, maka dari itu perlu preprocessing data . Saya berfikir hal ini tidak akan menjadi masalah. Karena, selain jumlah data pada datasetnya memiliki jumlah yang cukup banyak, proses reduction dapat mempercepat runtime model dengan menghemat memory.
         
-    -   Handling Duplicate Data
+   -   Handling Duplicate Data
         
         Dataset yang berantakan dan terduplikasi dapat mempengaruhi hasil modeling dan analisis akhir. Pada proyek ini, terdapat banyak duplikasi data didalamnya berdasarkan Member_id  dan Deskripsi_barang. Menghapusnya merupakan langkah yang tepat untuk merapikan data.
   - Replace to Indonesia Language
@@ -200,11 +195,11 @@ Evaluasi dilakukan untuk mengukur sejauh mana performance atau kinerja dari mode
     
     [![precision-for-recommendations](https://github.com/nurmuhimawann/MLT2-Dicoding/raw/main/images/precision-recommendations.png?raw=true)](https://github.com/nurmuhimawann/MLT2-Dicoding/blob/main/images/precision-recommendations.png?raw=true)
     
-    [![harry](https://github.com/nurmuhimawann/MLT2-Dicoding/raw/main/images/harry-potter.png?raw=true)](https://github.com/nurmuhimawann/MLT2-Dicoding/blob/main/images/harry-potter.png?raw=true)
     
-    Pada pendekatan content-based filtering ini, saya memakai produk 'Harry Potter and the Prisioner of Azkaban' untuk mencari rekomendasi produk lain yang sesuai. dan mendapatkan hasil sebagai berikut.
+    Pada pendekatan content-based filtering ini, saya memakai produk 'ikan lele' untuk mencari rekomendasi produk lain yang sesuai. dan mendapatkan hasil sebagai berikut.
     
-    [![output-cb](https://github.com/nurmuhimawann/MLT2-Dicoding/raw/main/images/output-content-based.png?raw=true)](https://github.com/nurmuhimawann/MLT2-Dicoding/blob/main/images/output-content-based.png?raw=true)
+       ![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/82adcb5b-a2b3-43d8-8fd8-17f17068f26f)
+
     
     Dengan memakai metrics precision, maka dapat dihitung:
     
