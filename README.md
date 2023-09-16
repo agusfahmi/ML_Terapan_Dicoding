@@ -1,3 +1,4 @@
+
 # Laporan Proyek Machine Learning - Agus Fahmi Aji Pramana
 
 ## Domain Proyek
@@ -7,12 +8,12 @@ Ketersediaan produk dalam jumlah yang melimpah di platform digital seringkali me
 
 Sistem rekomendasi pada platform digital berfungsi untuk menganalisis perilaku pembeli, seperti riwayat pembelian sebelumnya, preferensi produk, dan interaksi lainnya dengan platform. Berdasarkan data ini, sistem rekomendasi dapat memberikan rekomendasi produk yang relevan kepada pengguna. Dengan cara ini, penjual dapat memanfaatkan data yang ada untuk secara efektif mempromosikan produk mereka kepada pelanggan yang mungkin berminat, meningkatkan peluang penjualan, dan memperluas basis pelanggan mereka.
 
-Fitur rekomendasi juga membantu menciptakan pengalaman berbelanja yang lebih personal dan efisien bagi konsumen. Ketika pengguna melihat rekomendasi produk yang sesuai dengan preferensi mereka, mereka cenderung lebih puas dengan pengalaman berbelanja dan lebih mungkin untuk melakukan pembelian. Ini membantu menciptakan hubungan yang lebih kuat antara penjual dan pelanggan, yang pada gilirannya dapat meningkatkan loyalitas pelanggan dan pertumbuhan bisnis.
+Fitur rekomendasi juga membantu menciptakan pengalaman berbelanja yang lebih personal dan efisien bagi konsumen. Ketika pengguna melihat rekomendasi produk yang sesuai dengan preferensi mereka, mereka cenderung lebih puas dengan pengalaman berbelanja dan lebih mungkin untuk melakukan pembelian. Ini membantu menciptakan hubungan yang lebih kuat antara penjual dan pelanggan, yang pada gilirannya dapat meningkatkan loyalitas pelanggan dan pertumbuhan bisnis.[1]
 
 Dalam dunia digital yang kompetitif, penjual yang mampu menyediakan fitur rekomendasi yang efektif memiliki keunggulan yang signifikan. Dengan memanfaatkan teknologi ini, mereka dapat mengoptimalkan penjualan mereka, meningkatkan pengalaman pelanggan, dan tetap relevan di pasar yang terus berubah. Oleh karena itu, fitur rekomendasi adalah salah satu alat penting yang harus dimiliki oleh penjual dalam upaya mereka untuk sukses di pasar digital saat ini.
  - Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan : 
 Masalah yang dijelaskan di atas, yaitu pentingnya fitur rekomendasi dalam transformasi pasar tradisional ke dalam lingkungan digital, harus diselesaikan karena memiliki dampak yang signifikan pada keberhasilan bisnis dan pengalaman pelanggan. Berikut adalah beberapa alasan mengapa masalah ini harus diselesaikan: Pertama, fitur rekomendasi membantu penjual meningkatkan keunggulan bersaing dengan memungkinkan pelanggan dengan mudah menemukan produk yang sesuai dengan kebutuhan mereka, yang kritis dalam pasar yang sangat kompetitif. 
-Kedua, fitur ini dapat meningkatkan penghasilan dengan meningkatkan peluang penjualan dan memungkinkan pelanggan untuk melakukan pembelian tambahan atau berulang. Ketiga, fitur rekomendasi menciptakan pengalaman berbelanja yang lebih personal dan efisien bagi pelanggan, meningkatkan kepuasan mereka dan mendorong loyalitas terhadap merek atau platform. Keempat, dengan pemahaman yang lebih baik tentang preferensi pelanggan, penjual dapat mengoptimalkan inventaris mereka, mengurangi risiko kelebihan persediaan, dan mengelola operasi bisnis dengan lebih efisien. Terakhir, ini semua berkontribusi pada pertumbuhan bisnis yang signifikan, menjaga keberlanjutan, dan memungkinkan penjual untuk tetap bersaing di era bisnis yang semakin terhubung secara digital.
+Kedua, fitur ini dapat meningkatkan penghasilan dengan meningkatkan peluang penjualan dan memungkinkan pelanggan untuk melakukan pembelian tambahan atau berulang. Ketiga, fitur rekomendasi menciptakan pengalaman berbelanja yang lebih personal dan efisien bagi pelanggan, meningkatkan kepuasan mereka dan mendorong loyalitas terhadap merek atau platform. Keempat, dengan pemahaman yang lebih baik tentang preferensi pelanggan, penjual dapat mengoptimalkan inventaris mereka, mengurangi risiko kelebihan persediaan, dan mengelola operasi bisnis dengan lebih efisien. Terakhir, ini semua berkontribusi pada pertumbuhan bisnis yang signifikan, menjaga keberlanjutan, dan memungkinkan penjual untuk tetap bersaing di era bisnis yang semakin terhubung secara digital.[2]
   
   **Artikel dan Jurnal Referensi**:
 
@@ -90,24 +91,25 @@ Dilihat dari sudut pandang kerunutan proses dalam data preparation, saya melakuk
 
  
 **Data Cleaning**  `Groceries data.csv`
-    
-   Ada beberapa handling yang dilakukan pada dataframe  `Groceries Data`, diantaranya sebagai berikut.
-    
-   -   Handling Missing Values
+Ada beberapa tindakan yang dilakukan pada dataframe "Groceries Data", termasuk yang berikut.
+
+- Penanganan Nilai yang Hilang
+
+  Mengatasi data yang hilang, null, NaN, atau tidak dapat dibaca adalah hal umum yang sering terjadi. Agar data yang hilang tidak mempengaruhi kinerja model yang akan dikembangkan, maka langkah yang diambil adalah menghapusnya. Dalam proyek ini, terdapat nilai yang hilang pada beberapa fitur, salah satunya adalah kategori di mana terdapat data dengan nama yang tidak jelas.
+
+- Reduksi Data
+
+  Jumlah data yang terlalu banyak dapat memperlambat kinerja proses machine learning. Dalam proyek ini, diasumsikan bahwa ada beberapa dataset yang ambigu sehingga dapat membingungkan model. Oleh karena itu, preprocessing data diperlukan untuk mengatasi hal ini. Saya percaya bahwa hal ini tidak akan menjadi masalah karena jumlah data dalam dataset cukup banyak. Proses reduksi dapat mempercepat runtime model dan menghemat memory.
+
+- Penanganan Data Ganda
+
+  Dataset yang berantakan dan mengandung data ganda dapat mempengaruhi hasil pemodelan dan analisis akhir. Dalam proyek ini, terdapat banyak data ganda berdasarkan Member_id dan Deskripsi_barang. Menghapus data ganda adalah langkah yang tepat untuk membersihkan data.
+
+- Penggantian ke Bahasa Indonesia
+
+  Setelah pemrosesan data selesai, data diterjemahkan ke dalam bahasa Indonesia menggunakan Google Sheets agar mudah dipahami.
         
-        Data yang hilang, null, NaN atau tidak terbaca merupakan hal umum yang seringkali ditemui. Agar data yang missing tidak memengaruhi kinerja model yang akan dikembangkan, maka saya akan menghapusnya. Pada proyek ini, saya menemukan missing values pada beberapa feature, salah satunya adalah kategori dimana terdapat data yang tidak jelas namanya.
-        
-   -   Data Reduction
-        
-        Data yang terlalu banyak akan memperlambat kinerja proses machine learning. Pada proyek ini, saya memiliki asumsi kalau terdapat beberapa dataset yang ambigu sehingga membuat model kebingunan, maka dari itu perlu preprocessing data . Saya berfikir hal ini tidak akan menjadi masalah. Karena, selain jumlah data pada datasetnya memiliki jumlah yang cukup banyak, proses reduction dapat mempercepat runtime model dengan menghemat memory.
-        
-   -   Handling Duplicate Data
-        
-        Dataset yang berantakan dan terduplikasi dapat mempengaruhi hasil modeling dan analisis akhir. Pada proyek ini, terdapat banyak duplikasi data didalamnya berdasarkan Member_id  dan Deskripsi_barang. Menghapusnya merupakan langkah yang tepat untuk merapikan data.
-  - Replace to Indonesia Language
-  Setelah pemrosesan data selesai, data diterjemahkan kedalam bahasa indonesia menggunakan google sheets agar dapat mudah dipahami.
-        
-   -   Fixed data in Kategori features
+ -   Fixed data in Kategori features
         
         Pada features kategori, saya mendapati kategori  _**Sci-Fi**_. setelah saya pahami, ternyata  _**Sci-Fi**_  merupakan akronim dari kata  _**Science Fiction**_  yang menggambarkan transaksi yang dilakukan. kata  _**Sci-Fi**_  memiliki separator dash atau tanda pisah. Hal ini, perlu dihilangkan. apabila tidak dihilangkan maka pada tahap vektorisasi TF-IDF nantinya kata  _**Sci-Fi**_  akan diperlakukan sebagai 2 kata yang berbeda  _**Sci**_  dan  _**Fi**_. karena, pada tahap TF-IDF selain melakukan vektorisasi juga dilakukan tokenisasi.
 
@@ -138,8 +140,7 @@ Dilihat dari sudut pandang kerunutan proses dalam data preparation, saya melakuk
       ![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/7ea452b7-8293-4f74-901d-2d548dfaeb3a)
         
     4.  Create Custom Functions
-        
-        Tahapan terakhir adalah membangun custom function untuk mendapatkan rekomendasi terhadap data input yang diinginkan. functions ini bekerja dengan mengambil similarity dari data produk yang ingin dicari, data yang similar akan dimasukkan ke dalam variabel closest. parameter K di define untuk menghasilkan top-K recommendation berdasarkan tingkat similarity tertinggi. produk yang dicari akan dihapus agar tidak muncul dalam daftar rekomendasi. Step terakhir, return digunakan untuk mengembalikan values dalam bentuk dataframe, dimana values yang di return merupakan rekomendasi dari judul produk berdasarkan tingkat similarity.
+        Langkah terakhir melibatkan pembuatan fungsi khusus untuk mendapatkan rekomendasi berdasarkan data input yang diinginkan. Fungsi ini beroperasi dengan mengambil tingkat kemiripan dari produk yang ingin dicari, dan data yang mirip akan dimasukkan ke dalam variabel "closest". Parameter K ditentukan untuk menghasilkan rekomendasi teratas (top-K) berdasarkan tingkat kemiripan tertinggi. Produk yang dicari akan dihapus agar tidak muncul dalam daftar rekomendasi. Langkah akhir melibatkan penggunaan "return" untuk mengembalikan nilai dalam bentuk dataframe, di mana nilai yang dikembalikan adalah rekomendasi produk berdasarkan tingkat kemiripan.
         
        ![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/97ba48c9-6be7-4d13-8543-3c8fe8a50e01)
 
@@ -147,7 +148,7 @@ Dilihat dari sudut pandang kerunutan proses dalam data preparation, saya melakuk
     5.  Recommendations
         
         
-        Berikut ini merupakan Top 5 Recommendations berdasarkan kategori dari produk  'Harry Potter and the Prisioner of Azkaban'. Sistem telah berhasil merekomendasikan produk dengan sesuai, bisa dilihat pada hasil yang mendapatkan rekomendasi produk yang mirip dengan kategori Adventure dan Fantasy.
+        Berikut ini merupakan Top 5 Recommendations berdasarkan kategori dari produk  'Ikan lele'. Sistem telah berhasil merekomendasikan produk dengan sesuai, bisa dilihat pada hasil yang mendapatkan rekomendasi produk yang mirip dengan kategori Ikan Segar.
         
     ![image](https://github.com/agusfahmi/ML_Terapan_Dicoding/assets/85145157/82adcb5b-a2b3-43d8-8fd8-17f17068f26f)
         
@@ -203,28 +204,24 @@ Evaluasi dilakukan untuk mengukur sejauh mana performance atau kinerja dari mode
     
     Dengan memakai metrics precision, maka dapat dihitung:
     
-    -   'Harry Potter and the Prisioner of Azkaban'  pada kategori Adventure, Fantasy, IMAX.
-    -   Dari 5 produk rekomendasi, terdapat 3 produk yang memiliki kategori yang sama dengan yang dicari yaitu, kategori Adventure, Fantasy, IMAX. produk terakhir, merekomendasikan produk lain dengan kategori drama dan thriller. Ini tidak sesuai dengan apa yang dicari.
+    -   'Ikan lele'  pada kategori Ikan segar.
+    -   Dari 5 produk rekomendasi, terdapat 3 produk yang memiliki kategori yang sama dengan yang dicari yaitu, kategori Ikan segar. produk terakhir, merekomendasikan produk lain tetapi masih dalam kategori yang sama.
     
     Maka, sesuai dengan formula,
     
     _precision = (# of our recommended that are relevan) / (# of items we recommended item)_
     
-    _precision = 3 / 5_
+    _precision = 4.5 / 5_
     
-    _precision = 0.6_
+    _precision = 0.9_
     
-    _precision = 60%_
+    _precision = 90%_
     
-    Berdasarkan Top 5 rekomendasi produk yang diberikan didapatkan pricisions sebesar 60% dari model content-based filtering untuk sistem rekomendasi yang telah dikembangkan.
-    
-
+    Berdasarkan Top 5 rekomendasi produk yang diberikan didapatkan pricisions sebesar 90% dari model content-based filtering untuk sistem rekomendasi yang telah dikembangkan.
 
 Referensi:
+[1] S. Yi and X. Liu, “Machine learning based customer sentiment analysis for recommending shoppers, shops based on customers’ review,”  _Complex & Intelligent Systems_, vol. 6, no. 3, pp. 621–634, Jun. 2020, doi: https://doi.org/10.1007/s40747-020-00155-2.
 
-[1] J. Ni, T. Young, Vlad Pandelea, F. Xue, Vinay Adiga, and Z. Wang, "Recent advances in deep learning based dialogue systems: a systematic survey," Artificial Intelligence Review, vol. 56, no. 4, pp. 3055–3155, Aug. 2022, doi: [https://doi.org/10.1007/s10462-022-10248-8](https://doi.org/10.1007/s10462-022-10248-8).
-[2] P. Nandwani and R. Verma, "A review on sentiment analysis and emotion detection from text," Social Network Analysis and Mining, vol. 11, no. 1, Aug. 2021, doi: [https://doi.org/10.1007/s13278-021-00776-6](https://doi.org/10.1007/s13278-021-00776-6).
-[3] S. Akhtar, Deepanway Ghosal, Asif Ekbal, P. Bhattacharyya, and Sadao Kurohashi, "All-in-One: Emotion, Sentiment and Intensity Prediction Using a Multi-Task Ensemble Framework," IEEE Transactions on Affective Computing, vol. 13, no. 1, pp. 285–297, Jan. 2022, doi: [https://doi.org/10.1109/taffc.2019.2926724](https://doi.org/10.1109/taffc.2019.2926724).
-[4] Priya Chakriswaran, Durai Raj Vincent, K. Srinivasan, V. Sharma, C.-Y. Chang, and D. G. Reina, "Emotion AI-Driven Sentiment Analysis: A Survey, Future Research Directions, and Open Issues," Applied Sciences, vol. 9, no. 24, pp. 5462–5462, Dec. 2019, doi: [https://doi.org/10.3390/app9245462](https://doi.org/10.3390/app9245462).
-[5] M. S. Akhtar, D. S. Chauhan, D. Ghosal, S. Poria, A. Ekbal, and P. Bhattacharyya, "Multi-task Learning for Multi-modal Emotion Recognition and Sentiment Analysis," arXiv.org, 2019. [https://arxiv.org/abs/1905.05812](https://arxiv.org/abs/1905.05812) (accessed Sep. 09, 2023).
+‌[2]Zeynep Batmaz, A. Yürekli, Alper Bilge, and Cihan Kaleli, “A review on deep learning for recommender systems: challenges and remedies,”  _Artificial Intelligence Review_, vol. 52, no. 1, pp. 1–37, Aug. 2018, doi: https://doi.org/10.1007/s10462-018-9654-y.
 
+‌
